@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/novaos_title">
+        <Preference
+            android:key="nova_ai"
+            android:title="@string/nova_ai_settings"
+            android:summary="@string/nova_ai_summary"
+            android:fragment="com.android.settings.nova.NovaAISettingsFragment" />
+
+        <Preference
+            android:key="nova_boost"
+            android:title="@string/nova_boost_settings"
+            android:summary="@string/nova_boost_summary"
+            android:fragment="com.android.settings.nova.NovaBoostSettingsFragment" />
+
+        <Preference
+            android:key="nova_theme"
+            android:title="@string/nova_theme"
+            android:summary="@string/nova_theme_summary" />
+    </PreferenceCategory>
+
+
+    <Preference
+        android:key="advanced_customization"
+        android:title="Advanced Customization"
+        android:summary="Granular control over status bar, quick settings, and more"
+        android:fragment="com.android.settings.nova.CustomizationSettingsFragment" />
+
+</PreferenceScreen>
+
