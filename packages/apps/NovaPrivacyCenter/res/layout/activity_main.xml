@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Nova Privacy Center"
+        android:textSize="24sp"
+        android:textColor="#007fac"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/tab_permissions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permissions"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#007fac" />
+            <Button
+                android:id="@+id/tab_timeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timeline"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+            <Button
+                android:id="@+id/tab_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+            <Button
+                android:id="@+id/tab_vault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vault"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+            <Button
+                android:id="@+id/tab_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Security"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No history found"
+            android:textColor="#AAAAAA"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

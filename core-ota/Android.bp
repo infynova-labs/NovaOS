@@ -1,0 +1,10 @@
+android_library {
+    name: "core-ota",
+    srcs: ["src/main/java/**/*.kt"],
+    static_libs: [
+        "kotlinx_coroutines_android",
+        "hilt_android",
+    ],
+    platform_apis: true,
+    kotlincflags: ["-Xjvm-default=enable"],
+}

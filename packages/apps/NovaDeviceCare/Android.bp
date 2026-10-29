@@ -1,0 +1,13 @@
+android_app {
+    name: "NovaDeviceCare",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx.recyclerview_recyclerview",
+        "androidx.annotation_annotation",
+    ],
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Nova Device Care"
+        android:textSize="24sp"
+        android:textColor="#007fac"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_optimize"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:text="Optimize"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/circular_button_bg"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/optimize_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <Button
+            android:id="@+id/tab_battery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Battery"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#007fac" />
+        <Button
+            android:id="@+id/tab_storage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Storage"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/tab_perf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Performance"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/battery_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/battery_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85%"
+                android:textSize="48sp"
+                android:textColor="#00FF00" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estimated: 12h 30m remaining"
+                android:textColor="#AAAAAA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/storage_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Storage Usage"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="65"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/storage_stats_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculating..."
+                android:textColor="#AAAAAA" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
