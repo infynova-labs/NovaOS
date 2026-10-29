@@ -1,0 +1,8 @@
+type novaos_share_app, domain;
+app_domain(novaos_share_app)
+net_domain(novaos_share_app)
+
+# Allow WifiP2P interaction
+allow novaos_share_app wifip2p_service:service_manager find;
+allow novaos_share_app wifi_service:service_manager find;
+get_prop(novaos_share_app, wifi_prop)

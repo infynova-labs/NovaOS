@@ -1,0 +1,9 @@
+type novaos_account_app, domain;
+app_domain(novaos_account_app)
+net_domain(novaos_account_app)
+
+# Allow interaction with AccountManager
+allow novaos_account_app account_service:service_manager find;
+
+# Allow access to properties
+get_prop(novaos_account_app, nova_prop)

@@ -1,0 +1,16 @@
+ro.nova.version               u:object_r:nova_prop:s0 exact string
+ro.nova.release.type          u:object_r:nova_prop:s0 exact string
+ro.nova.ota.url               u:object_r:nova_ota_prop:s0 exact string
+ro.nova.auth.url              u:object_r:nova_prop:s0 exact string
+ro.nova.guardian.enabled      u:object_r:nova_guardian_prop:s0 exact bool
+
+nova.ota.check.result         u:object_r:nova_ota_prop:s0 exact string
+nova.ota.server.version       u:object_r:nova_ota_prop:s0 exact string
+nova.maintenance.run          u:object_r:nova_power_prop:s0 exact bool
+
+persist.nova.power.profile    u:object_r:nova_power_prop:s0 exact string
+persist.nova.privacy_mode      u:object_r:nova_guardian_prop:s0 exact bool
+persist.sys.nova.ai_enabled   u:object_r:nova_ai_prop:s0 exact bool
+
+debug.nova.cpu.boost          u:object_r:nova_power_prop:s0 exact bool
+debug.nova.touch.sampling     u:object_r:nova_prop:s0 exact int

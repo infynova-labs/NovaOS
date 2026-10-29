@@ -1,0 +1,7 @@
+type novaos_fonts_service, service_manager_type;
+type novaos_fonts_app, domain;
+type novaos_fonts_app_exec, exec_type, file_type, system_file_type;
+
+app_domain(novaos_fonts_app)
+allow novaos_fonts_app novaos_fonts_service:service_manager add;
+allow novaos_fonts_app system_file:file r_file_perms;

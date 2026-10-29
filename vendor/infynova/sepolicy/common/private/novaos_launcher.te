@@ -1,0 +1,10 @@
+type novaos_launcher_app, domain;
+app_domain(novaos_launcher_app)
+
+# Allow interaction with system services
+allow novaos_launcher_app activity_service:service_manager find;
+allow novaos_launcher_app package_service:service_manager find;
+allow novaos_launcher_app wallpaper_service:service_manager find;
+
+# Allow access to properties
+get_prop(novaos_launcher_app, nova_prop)

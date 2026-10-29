@@ -1,0 +1,14 @@
+{
+  "updates": [
+    {
+      "version": "1.0.1",
+      "codename": "Solstice-v2",
+      "type": "stable",
+      "size": "1288490188",
+      "datetime": "1740720000",
+      "filename": "nova_common-ota-1.0.1.zip",
+      "url": "https://ota.novaos.io/builds/nova_common-ota-1.0.1.zip",
+      "changelog": "https://novaos.io/changelogs/1.0.1.html"
+    }
+  ]
+}

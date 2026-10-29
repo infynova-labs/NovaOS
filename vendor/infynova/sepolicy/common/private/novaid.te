@@ -1,0 +1,30 @@
+# novaid - Native AI Daemon for NovaOS
+type novaid, domain;
+type novaid_exec, exec_type, vendor_file_type, file_type;
+type nova_model_file, file_type, system_file_type;
+
+# Initialization
+init_daemon_domain(novaid)
+
+# Allow Binder IPC
+binder_use(novaid)
+binder_service(novaid)
+binder_call(novaid, system_server)
+
+# Register service
+type novaid_service, service_manager_type;
+allow novaid novaid_service:service_manager add;
+
+# Hardware acceleration & Model access
+allow novaid gpu_device:chr_file rw_file_perms;
+allow novaid ion_device:chr_file r_file_perms;
+allow novaid nova_model_file:file { r_file_perms map };
+
+# Property access
+set_prop(novaid, nova_ai_prop)
+set_prop(novaid, nova_power_prop)
+
+# Log access
+allow novaid logcat_device:chr_file rw_file_perms;
+allow novaid logdr_socket:sock_file write;
+allow novaid logd:unix_stream_socket connectto;

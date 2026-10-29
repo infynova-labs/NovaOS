@@ -1,0 +1,11 @@
+type novaos_setup_app, domain;
+app_domain(novaos_setup_app)
+
+# Allow setting DEVICE_PROVISIONED
+allow novaos_setup_app settings_service:service_manager find;
+
+# Allow access to system settings
+allow novaos_setup_app system_settings_config_prop:file read;
+
+# Allow setting nova properties
+set_prop(novaos_setup_app, nova_prop)

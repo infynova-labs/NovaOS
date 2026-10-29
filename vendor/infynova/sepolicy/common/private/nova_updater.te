@@ -1,0 +1,13 @@
+type nova_updater_app, domain;
+app_domain(nova_updater_app)
+
+# Allow interaction with update_engine
+allow nova_updater_app update_engine_service:service_manager find;
+binder_call(nova_updater_app, update_engine)
+
+# Allow network access for checking updates
+net_domain(nova_updater_app)
+
+# Allow reading system properties for version check
+get_prop(nova_updater_app, nova_prop)
+get_prop(nova_updater_app, build_prop)

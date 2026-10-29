@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NovaOS QS Polish -->
+    <integer name="quick_settings_num_columns">2</integer>
+    <integer name="quick_qs_panel_max_tiles">4</integer>
+    
+    <!-- Snappier Volume Dialog -->
+    <integer name="config_dialogShowAnimationDurationMs">200</integer>
+    <integer name="config_dialogHideAnimationDurationMs">180</integer>
+
+    <!-- UI Polish -->
+    <dimen name="config_qsTileStrokeWidthActive">2dp</dimen>
+    <bool name="config_showBatteryEstimateQSBH">true</bool>
+
+    <!-- Minimalist Status Bar -->
+    <bool name="config_showOperatorNameInStatusBar">false</bool>
+    <bool name="config_enablePrivacyDot">true</bool>
+</resources>

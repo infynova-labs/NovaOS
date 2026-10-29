@@ -1,0 +1,10 @@
+type novaos_theme_service, service_manager_type;
+type novaos_theme_app, domain;
+type novaos_theme_app_exec, exec_type, file_type, system_file_type;
+
+app_domain(novaos_theme_app)
+allow novaos_theme_app novaos_theme_service:service_manager add;
+
+# Allow system apps and shell to find the service
+allow { system_app shell } novaos_theme_service:service_manager find;
+binder_call({ system_app shell }, novaos_theme_app)

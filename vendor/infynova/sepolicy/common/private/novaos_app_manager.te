@@ -1,0 +1,11 @@
+type novaos_app_manager_service, service_manager_type;
+type novaos_app_manager_app, domain;
+type novaos_app_manager_exec, exec_type, file_type, system_file_type;
+type novaos_data_file, file_type, data_file_type, core_data_file_type;
+
+app_domain(novaos_app_manager_app)
+init_daemon_domain(novaos_app_manager_app)
+
+allow novaos_app_manager_app novaos_app_manager_service:service_manager add;
+allow novaos_app_manager_app novaos_data_file:dir create_dir_perms;
+allow novaos_app_manager_app novaos_data_file:file create_file_perms;

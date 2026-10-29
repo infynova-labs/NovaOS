@@ -1,0 +1,7 @@
+novaos_ai_service                              u:object_r:novaos_ai_service:s0
+novaos_fonts_service u:object_r:novaos_fonts_service:s0
+novaos_app_manager_service u:object_r:novaos_app_manager_service:s0
+novatheme                                       u:object_r:novaos_theme_service:s0
+novaguard                                       u:object_r:novaos_guard_service:s0
+novaid                                          u:object_r:novaid_service:s0
+nova_guardian                                   u:object_r:novaos_guard_service:s0

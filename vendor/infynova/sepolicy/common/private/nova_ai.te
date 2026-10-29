@@ -1,0 +1,22 @@
+# NovaOS AI Privacy Policy Hardening
+type nova_ai_service, domain, coredomain;
+type nova_ai_service_exec, system_file_type, exec_type, file_type;
+
+# Disallow network access entirely for AI domains
+neverallow nova_ai_service { network_file_type socket_class_set }:* *;
+
+# Restrict all internet-facing IO
+neverallow nova_ai_service self:tcp_socket *;
+neverallow nova_ai_service self:udp_socket *;
+
+# Allow access to ML accelerators only (NPU/GPU)
+allow nova_ai_service gpu_device:chr_file rw_file_perms;
+allow nova_ai_service ml_accelerator_device:chr_file rw_file_perms;
+
+# Private Compute Sandbox Data (isolated)
+type nova_ai_data_file, file_type, data_file_type, core_data_file_type;
+allow nova_ai_service nova_ai_data_file:dir create_dir_perms;
+allow nova_ai_service nova_ai_data_file:file create_file_perms;
+
+# Assert Privacy: No other domain can read AI data
+neverallow { domain -nova_ai_service -init -vold } nova_ai_data_file:file read;

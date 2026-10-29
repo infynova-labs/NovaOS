@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- True Dark Mode for SystemUI (Power Menu, Shade, etc.) -->
+    <color name="global_actions_separated_background">#ff000000</color>
+    <color name="global_actions_grid_background">#ff000000</color>
+    <color name="notification_legacy_background_color">#ff000000</color>
+    
+    <!-- Scrims and protections -->
+    <color name="overlay_background_protection_start">#99000000</color>
+</resources>

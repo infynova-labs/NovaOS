@@ -1,0 +1,49 @@
+// NovaAID - Native AI Daemon for NovaOS
+
+cc_binary {
+    name: "novaid",
+    srcs: [
+        "NovaAIService.cpp",
+    ],
+    shared_libs: [
+        "libbinder",
+        "libutils",
+        "liblog",
+        "libcutils",
+        "libbase",
+        "com.infynova.novaid-cpp",
+    ],
+    static_libs: [
+        // This is where llama.cpp or other ML libs would be linked
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+        "-Wunreachable-code",
+    ],
+    init_rc: ["novaid.rc"],
+    vendor: true,
+}
+
+aidl_interface {
+    name: "com.infynova.novaid",
+    vendor_available: true,
+    unstable: true,
+    srcs: [
+        "com/infynova/novaid/INovaAIService.aidl",
+        "com/infynova/novaid/INovaAIStreamCallback.aidl",
+    ],
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+}

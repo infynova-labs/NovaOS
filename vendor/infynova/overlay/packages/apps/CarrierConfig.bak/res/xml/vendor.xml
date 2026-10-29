@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carrier_config>
+    <!-- Enable Call Recording (Subject to regional overrides in real OS) -->
+    <boolean name="call_recording_enabled_bool" value="true" />
+    <boolean name="allow_local_dtmf_tones_bool" value="true" />
+    
+    <!-- Spam Detection Support -->
+    <boolean name="call_screening_app_enabled_bool" value="true" />
+</carrier_config>

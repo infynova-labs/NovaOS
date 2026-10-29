@@ -1,0 +1,7 @@
+/system/bin/novaos_ai_service                  u:object_r:novaos_ai_app_exec:s0
+/system/bin/novaos_fonts_service               u:object_r:novaos_fonts_app_exec:s0
+/system/bin/novaos_app_manager_service         u:object_r:novaos_app_manager_exec:s0
+/vendor/bin/novaid                             u:object_r:novaid_exec:s0
+/product/etc/nova/models(/.*)?                 u:object_r:nova_model_file:s0
+/data/system/novaos(/.*)?                      u:object_r:novaos_data_file:s0
+/data/system/nova_guardian\.xml                u:object_r:nova_guardian_data_file:s0

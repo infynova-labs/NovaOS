@@ -1,0 +1,9 @@
+type novaos_dialer_app, domain;
+app_domain(novaos_dialer_app)
+
+# Allow interaction with telecom and telephony services
+allow novaos_dialer_app telecom_service:service_manager find;
+allow novaos_dialer_app radio_service:service_manager find;
+
+# Allow binding to AI service for screening
+binder_call(novaos_dialer_app, novaos_ai_app)

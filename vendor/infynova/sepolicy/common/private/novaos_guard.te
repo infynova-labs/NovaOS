@@ -1,0 +1,18 @@
+type novaos_guard_service, service_manager_type;
+type novaos_guard_app, domain;
+type novaos_guard_app_exec, exec_type, file_type, system_file_type;
+type nova_guardian_data_file, file_type, data_file_type, core_data_file_type;
+
+app_domain(novaos_guard_app)
+allow novaos_guard_app novaos_guard_service:service_manager add;
+
+# Allow system_server to manage the guardian settings
+allow system_server nova_guardian_data_file:dir create_dir_perms;
+allow system_server nova_guardian_data_file:file create_file_perms;
+
+# Restrict access to novaguard service
+allow { system_app shell } novaos_guard_service:service_manager find;
+binder_call({ system_app shell }, novaos_guard_app)
+
+# Integrity monitoring needs access to /proc/mounts
+allow novaos_guard_app proc_mounts:file r_file_perms;

@@ -1,0 +1,7 @@
+# NovaOS Properties
+type nova_prop, property_type;
+type nova_power_prop, property_type;
+type nova_ota_prop, property_type;
+type nova_ai_prop, property_type;
+type nova_theme_prop, property_type;
+type nova_guardian_prop, property_type;

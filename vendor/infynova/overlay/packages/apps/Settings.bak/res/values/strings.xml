@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- About Phone Branding -->
+    <string name="firmware_version">NovaOS version</string>
+    <string name="device_name">NovaOS Device</string>
+    <string name="about_settings">About NovaOS</string>
+    <string name="model_info">NovaOS Model Info</string>
+    
+    <!-- Legal/Version Info -->
+    <string name="android_version">NovaOS version</string>
+    <string name="baseband_version">NovaOS Baseband</string>
+    <string name="kernel_version">NovaOS Kernel</string>
+    <string name="build_number">NovaOS Build Number</string>
+
+    <!-- NovaOS Settings Dash -->
+    <string name="novaos_dashboard_title">NovaOS Dash</string>
+    <string name="nova_ai_settings">Nova AI</string>
+    <string name="nova_ai_summary">Text rewriting, summaries, and search intelligence.</string>
+    <string name="nova_ai_rewrite_title">AI Text Rewrite</string>
+    <string name="nova_ai_rewrite_summary">Intelligently rewrite selected text for tone and clarity.</string>
+    <string name="nova_ai_summarize_title">AI Summarization</string>
+    <string name="nova_ai_summarize_summary">Generate concise summaries of long documents.</string>
+    <string name="nova_ai_speed_title">AI Processing Speed</string>
+    <string name="nova_boost_settings">Nova Boost</string>
+    <string name="nova_boost_summary">Optimize app performance and battery life.</string>
+    <string name="nova_boost_profile_title">Performance Profile</string>
+    <string name="nova_boost_profile_summary">Choose how NovaOS balances speed and battery.</string>
+    <string name="nova_boost_preload_title">Predictive Preloading</string>
+    <string name="nova_boost_preload_summary">Launch apps faster by predicting your usage.</string>
+    <string name="nova_theme_summary">Fonts, icons, and Monet customization.</string>
+</resources>
+

@@ -1,0 +1,8 @@
+user=_app isPrivApp=true name=com.novaos.updater domain=nova_updater_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.novaos.ai domain=novaos_ai_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.infynova.fonts domain=novaos_fonts_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.nova.account domain=novaos_account_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.nova.setup domain=novaos_setup_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.infynova.dialer domain=novaos_dialer_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.infynova.share domain=novaos_share_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.infynova.launcher domain=novaos_launcher_app type=privapp_data_file levelFrom=user

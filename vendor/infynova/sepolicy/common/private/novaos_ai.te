@@ -1,0 +1,7 @@
+type novaos_ai_service, service_manager_type;
+type novaos_ai_app, domain;
+type novaos_ai_app_exec, exec_type, file_type, system_file_type;
+
+app_domain(novaos_ai_app)
+auditallow novaos_ai_app self:process ptrace;
+allow novaos_ai_app novaos_ai_service:service_manager add;
